@@ -5,7 +5,12 @@
 </template>
 
 <script>
-export default {};
+export default {
+  validate(data) {
+    // console.log("10===", data);
+    return /^\d+$/.test(data.params.id);
+  },
+};
 </script>
 
 <style></style>
